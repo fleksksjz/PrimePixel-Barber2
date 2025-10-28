@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WowBarber - Experiência Premium</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav-container">
+    <h1 class="logo">WowBarber</h1>
+    <ul class="nav-links">
+      <li><a href="#hero">Início</a></li>
+      <li><a href="#sobre">Nossa História</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#agendamento">Agendar</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="hero">
+    <img src="assets/barber.jpg" alt="Barbearia Premium" class="hero-img">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Transforme seu visual com estilo e confiança</h1>
+      <p>Barbearia Premium com atendimento exclusivo</p>
+      <button id="btn-agendar" class="btn-primary">Agendar Agora</button>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="container">
+    <h2>Nossa História</h2>
+    <p>Desde 2010, a WowBarber é sinônimo de estilo, tradição e cuidado masculino. Nosso espaço foi criado para quem busca mais do que um corte — uma experiência completa, com conforto e sofisticação.</p>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="container">
+    <h2>Serviços</h2>
+    <div class="cards-servicos">
+      <div class="card-servico"><h3>Corte Clássico</h3><p>R$60</p></div>
+      <div class="card-servico"><h3>Barba</h3><p>R$40</p></div>
+      <div class="card-servico"><h3>Pacote Premium</h3><p>R$100</p></div>
+      <div class="card-servico"><h3>Navalhado + Hidratação</h3><p>R$85</p></div>
+      <div class="card-servico"><h3>Platinado / Tintura</h3><p>R$120</p></div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="container">
+    <h2>O que nossos clientes dizem</h2>
+    <div class="cards-depoimentos">
+      <div class="card-depoimento">"Ambiente incrível, atendimento de primeira e corte impecável!" — <b>Lucas M.</b></div>
+      <div class="card-depoimento">"A melhor barbearia da cidade, sempre volto satisfeito." — <b>Felipe A.</b></div>
+      <div class="card-depoimento">"Cuidam de cada detalhe, até o café é top!" — <b>Rafael C.</b></div>
+      <div class="card-depoimento">"Profissionais experientes e ambiente super agradável." — <b>Bruno T.</b></div>
+    </div>
+  </section>
+
+  <!-- AGENDAMENTO -->
+  <section id="agendamento" class="container">
+    <h2>Agende seu horário</h2>
+    <div id="horarios-container"></div>
+    <p id="msg"></p>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="container">
+    <h2>Contatos</h2>
+    <p>WhatsApp: <a href="https://wa.me/5511999999999" target="_blank">+55 11 99999-9999</a></p>
+    <p>Instagram: <a href="https://instagram.com/wowbarber" target="_blank">@wowbarber</a></p>
+  </section>
+</main>
+
+<!-- MODAL AGENDAMENTO -->
+<div id="modal-agendamento" class="modal">
+  <div class="modal-content">
+    <span id="close-modal">&times;</span>
+    <h3>Agendar Horário</h3>
+    <form id="form-agendamento">
+      <input type="text" name="nome" placeholder="Nome completo" required>
+      <input type="text" name="telefone" placeholder="Telefone/WhatsApp" required>
+      <select name="servico" required>
+        <option value="">Selecione o serviço</option>
+        <option value="Corte Clássico">Corte Clássico</option>
+        <option value="Barba">Barba</option>
+        <option value="Pacote Premium">Pacote Premium</option>
+        <option value="Navalhado + Hidratação">Navalhado + Hidratação</option>
+        <option value="Platinado / Tintura">Platinado / Tintura</option>
+      </select>
+      <input type="date" name="data" required>
+      <input type="time" name="hora" required>
+      <button type="submit" class="btn-primary">Confirmar</button>
+    </form>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel" class="modal">
+  <div class="modal-content">
+    <span id="close-admin">&times;</span>
+    <h3>Painel de Administração</h3>
+    <div id="lista-agendamentos"></div>
+    <button id="btn-limpar" class="btn-primary">Limpar Todos</button>
+  </div>
+</div>
+
+<footer id="footer">
+  <p>&copy; WowBarber 2025</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
